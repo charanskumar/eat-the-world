@@ -2,8 +2,9 @@ const cuisineCatCards = require('../categoryCards');
 
 function index(req, res) {
     const cuisine = req.params.id;
-    //const foodCategories = await cuisineCatCards[cuisine];
-    res.render('cuisine/index', {cuisine: cuisine});
+    const foodCategories = cuisineCatCards[cuisine];
+    res.render('cuisine/index', {cuisine: cuisine, foodCategories: foodCategories});
+    console.log(foodCategories)
 }
 
 module.exports = {

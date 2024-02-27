@@ -4,22 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Document</title>
 </head>
 <body>
-    <h1 class="title">Eat the World</h1>
-    <p>Explore cuisines from around the globe!</p>
-    <nav>
-        <a href="/cuisine/american">American</a>
-        <a href="/cuisine/indian">Indian</a>
-        <a href="/cuisine/chinese">Chinese</a>
-        <a href="/cuisine/italian">Italian</a>
-        <a href="/cuisine/mexican">Mexican</a>
-        <a href="/cuisine/german">German</a>
-        <a href="/cuisine/mediterranean">Mediterranean</a>
-        <% if (user) { %>
-            <a href="/logout">LOG OUT</a>
-        <% } else { %>
-            <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-        <% } %>
-    </nav>
+    <div class="header">
+        <h1 class="title">Eat the World</h1>
+        <p>Explore cuisines from around the globe!</p>
+        <nav>
+            <a href="/cuisine/american">American</a>
+            <a href="/cuisine/indian">Indian</a>
+            <a href="/cuisine/chinese">Chinese</a>
+            <a href="/cuisine/italian">Italian</a>
+            <a href="/cuisine/mexican">Mexican</a>
+            <a href="/cuisine/german">German</a>
+            <a href="/cuisine/mediterranean">Mediterranean</a>
+            <% if (user) { %>
+                <a href="/logout">LOG OUT</a>
+            <% } else { %>
+                <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+            <% } %>
+        </nav>
+    </div>

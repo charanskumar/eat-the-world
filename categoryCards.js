@@ -2,53 +2,53 @@
 
 const cuisineCatCards = {
     american: [
-        {Appetizers: String},
-        {Entrees: String},
-        {Sides: String},
-        {Deserts: String},
-        {Beverages: String}
+        {cat: 'Appetizers'},
+        {cat: 'Entrees'},
+        {cat: 'Sides'},
+        {cat: 'Deserts'},
+        {cat: 'Beverages'}
     ],
     indian: [
-        {Appetizers: String},
-        {Entrees: String},
-        {Sides: String},
-        {Deserts: String},
-        {Beverages: String}
+        {cat: 'Appetizers'},
+        {cat: 'Entrees'},
+        {cat: 'Sides'},
+        {cat: 'Deserts'},
+        {cat: 'Beverages'}
     ],
     chinese: [
-        {Appetizers: String},
-        {Entrees: String},
-        {Sides: String},
-        {Deserts: String},
-        {Beverages: String}
+        {cat: 'Appetizers'},
+        {cat: 'Entrees'},
+        {cat: 'Sides'},
+        {cat: 'Deserts'},
+        {cat: 'Beverages'}
     ],
     italian: [
-        {Appetizers: String},
-        {Entrees: String},
-        {Sides: String},
-        {Deserts: String},
-        {Beverages: String}
+        {cat: 'Appetizers'},
+        {cat: 'Entrees'},
+        {cat: 'Sides'},
+        {cat: 'Deserts'},
+        {cat: 'Beverages'}
     ],
     mexican: [
-        {Appetizers: String},
-        {Entrees: String},
-        {Sides: String},
-        {Deserts: String},
-        {Beverages: String}
+        {cat: 'Appetizers'},
+        {cat: 'Entrees'},
+        {cat: 'Sides'},
+        {cat: 'Deserts'},
+        {cat: 'Beverages'}
     ],
     german: [
-        {Appetizers: String},
-        {Entrees: String},
-        {Sides: String},
-        {Deserts: String},
-        {Beverages: String}
+        {cat: 'Appetizers'},
+        {cat: 'Entrees'},
+        {cat: 'Sides'},
+        {cat: 'Deserts'},
+        {cat: 'Beverages'}
     ],
     mediterranean: [
-        {Appetizers: String},
-        {Entrees: String},
-        {Sides: String},
-        {Deserts: String},
-        {Beverages: String}
+        {cat: 'Appetizers'},
+        {cat: 'Entrees'},
+        {cat: 'Sides'},
+        {cat: 'Deserts'},
+        {cat: 'Beverages'}
     ]
 }
 
