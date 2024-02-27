@@ -1,11 +1,14 @@
 // These contain meal names and pictures - Listed by Region //
 
+const e = require("express");
+
 async function fetchAmerica() {
   const response = await fetch(
     "https://www.themealdb.com/api/json/v1/1/filter.php?a=American"
   );
   const america = await response.json();
   console.log(america);
+  return america;
 }
 
 async function fetchBritain() {
@@ -14,6 +17,7 @@ async function fetchBritain() {
   );
   const britain = await response.json();
   console.log(britain);
+  return britain;
 }
 
 async function fetchCanada() {
@@ -22,6 +26,7 @@ async function fetchCanada() {
   );
   const canada = await response.json();
   console.log(canada);
+  return canada;
 }
 
 async function fetchChina() {
@@ -30,6 +35,7 @@ async function fetchChina() {
   );
   const china = await response.json();
   console.log(china);
+  return china;
 }
 
 async function fetchCroatia() {
@@ -38,6 +44,7 @@ async function fetchCroatia() {
   );
   const croatia = await response.json();
   console.log(croatia);
+  return croatia;
 }
 
 async function fetchDutch() {
@@ -46,6 +53,7 @@ async function fetchDutch() {
   );
   const dutch = await response.json();
   console.log(dutch);
+  return dutch;
 }
 
 async function fetchEgypt() {
@@ -54,6 +62,7 @@ async function fetchEgypt() {
   );
   const egypt = await response.json();
   console.log(egypt);
+  return egypt;
 }
 
 async function fetchPhillipeans() {
@@ -62,6 +71,7 @@ async function fetchPhillipeans() {
   );
   const phillipeans = await response.json();
   console.log(phillipeans);
+  return phillipeans;
 }
 
 async function fetchFrance() {
@@ -70,6 +80,7 @@ async function fetchFrance() {
   );
   const france = await response.json();
   console.log(france);
+  return france;
 }
 
 async function fetchGreek() {
@@ -78,6 +89,7 @@ async function fetchGreek() {
   );
   const greek = await response.json();
   console.log(greek);
+  return greek;
 }
 
 async function fetchIndia() {
@@ -86,6 +98,7 @@ async function fetchIndia() {
   );
   const india = await response.json();
   console.log(india);
+  return india;
 }
 
 async function fetchIreland() {
@@ -94,6 +107,7 @@ async function fetchIreland() {
   );
   const ireland = await response.json();
   console.log(ireland);
+  return ireland;
 }
 
 async function fetchItaly() {
@@ -102,6 +116,7 @@ async function fetchItaly() {
   );
   const italy = await response.json();
   console.log(italy);
+  return italy;
 }
 
 async function fetchJamaica() {
@@ -110,6 +125,7 @@ async function fetchJamaica() {
   );
   const jamaica = await response.json();
   console.log(jamaica);
+  return jamaica;
 }
 
 async function fetchJapan() {
@@ -118,6 +134,7 @@ async function fetchJapan() {
   );
   const japan = await response.json();
   console.log(japan);
+  return japan;
 }
 
 async function fetchMalaysia() {
@@ -126,6 +143,7 @@ async function fetchMalaysia() {
   );
   const malaysia = await response.json();
   console.log(malaysia);
+  return malaysia;
 }
 
 async function fetchMexico() {
@@ -134,6 +152,7 @@ async function fetchMexico() {
   );
   const mexico = await response.json();
   console.log(mexico);
+  return mexico;
 }
 
 async function fetchMorocco() {
@@ -142,6 +161,7 @@ async function fetchMorocco() {
   );
   const morocco = await response.json();
   console.log(morocco);
+  return morocco;
 }
 
 async function fetchPoland() {
@@ -150,6 +170,7 @@ async function fetchPoland() {
   );
   const poland = await response.json();
   console.log(poland);
+  return poland;
 }
 
 async function fetchPortugal() {
@@ -158,6 +179,7 @@ async function fetchPortugal() {
   );
   const portugal = await response.json();
   console.log(portugal);
+  return portugal;
 }
 
 async function fetchRussia() {
@@ -166,6 +188,7 @@ async function fetchRussia() {
   );
   const russia = await response.json();
   console.log(russia);
+  return russia;
 }
 
 async function fetchSpain() {
@@ -174,6 +197,7 @@ async function fetchSpain() {
   );
   const spain = await response.json();
   console.log(spain);
+  return spain;
 }
 
 async function fetchThailand() {
@@ -182,6 +206,7 @@ async function fetchThailand() {
   );
   const thailand = await response.json();
   console.log(thailand);
+  return thailand;
 }
 
 async function fetchTunisia() {
@@ -190,6 +215,7 @@ async function fetchTunisia() {
   );
   const tunisia = await response.json();
   console.log(tunisia);
+  return tunisia;
 }
 
 async function fetchVietnam() {
@@ -198,6 +224,7 @@ async function fetchVietnam() {
   );
   const vietnam = await response.json();
   console.log(vietnam);
+  return vietnam;
 }
 
 // These contain meal names, categories, and ingredients - Listed by item A-Z //
@@ -207,6 +234,7 @@ async function fetchAFoods() {
   );
   const aFoods = await response.json();
   console.log(aFoods);
+  return aFoods;
 }
 async function fetchBFoods() {
   const response = await fetch(
@@ -214,6 +242,7 @@ async function fetchBFoods() {
   );
   const bFoods = await response.json();
   console.log(bFoods);
+  return bFoods;
 }
 async function fetchCFoods() {
   const response = await fetch(
@@ -221,6 +250,7 @@ async function fetchCFoods() {
   );
   const cFoods = await response.json();
   console.log(cFoods);
+  return cFoods;
 }
 async function fetchDFoods() {
   const response = await fetch(
@@ -228,6 +258,7 @@ async function fetchDFoods() {
   );
   const dFoods = await response.json();
   console.log(dFoods);
+  return dFoods;
 }
 async function fetchEFoods() {
   const response = await fetch(
@@ -235,6 +266,7 @@ async function fetchEFoods() {
   );
   const eFoods = await response.json();
   console.log(eFoods);
+  return eFoods;
 }
 
 async function fetchFFoods() {
@@ -243,6 +275,7 @@ async function fetchFFoods() {
   );
   const fFoods = await response.json();
   console.log(fFoods);
+  return fFoods;
 }
 
 async function fetchGFoods() {
@@ -251,6 +284,7 @@ async function fetchGFoods() {
   );
   const gFoods = await response.json();
   console.log(gFoods);
+  return gFoods;
 }
 
 async function fetchHFoods() {
@@ -259,6 +293,7 @@ async function fetchHFoods() {
   );
   const hFoods = await response.json();
   console.log(hFoods);
+  return hFoods;
 }
 
 async function fetchIFoods() {
@@ -267,6 +302,7 @@ async function fetchIFoods() {
   );
   const iFoods = await response.json();
   console.log(iFoods);
+  return iFoods;
 }
 
 async function fetchJFoods() {
@@ -275,6 +311,7 @@ async function fetchJFoods() {
   );
   const jFoods = await response.json();
   console.log(jFoods);
+  return jFoods;
 }
 
 async function fetchKFoods() {
@@ -283,6 +320,7 @@ async function fetchKFoods() {
   );
   const kFoods = await response.json();
   console.log(kFoods);
+  return kFoods;
 }
 
 async function fetchLFoods() {
@@ -291,6 +329,7 @@ async function fetchLFoods() {
   );
   const lFoods = await response.json();
   console.log(lFoods);
+  return lFoods;
 }
 
 async function fetchMFoods() {
@@ -299,6 +338,7 @@ async function fetchMFoods() {
   );
   const mFoods = await response.json();
   console.log(mFoods);
+  return mFoods;
 }
 
 async function fetchNFoods() {
@@ -307,6 +347,7 @@ async function fetchNFoods() {
   );
   const nFoods = await response.json();
   console.log(nFoods);
+  return nFoods;
 }
 
 async function fetchOFoods() {
@@ -315,6 +356,7 @@ async function fetchOFoods() {
   );
   const oFoods = await response.json();
   console.log(oFoods);
+  return oFoods;
 }
 
 async function fetchPFoods() {
@@ -323,6 +365,7 @@ async function fetchPFoods() {
   );
   const pFoods = await response.json();
   console.log(pFoods);
+  return pFoods;
 }
 
 async function fetchQFoods() {
@@ -331,6 +374,7 @@ async function fetchQFoods() {
   );
   const qFoods = await response.json();
   console.log(qFoods);
+  return qFoods;
 }
 
 async function fetchRFoods() {
@@ -339,6 +383,7 @@ async function fetchRFoods() {
   );
   const rFoods = await response.json();
   console.log(rFoods);
+  return rFoods;
 }
 
 async function fetchSFoods() {
@@ -347,6 +392,7 @@ async function fetchSFoods() {
   );
   const sFoods = await response.json();
   console.log(sFoods);
+  return sFoods;
 }
 
 async function fetchTFoods() {
@@ -355,6 +401,7 @@ async function fetchTFoods() {
   );
   const tFoods = await response.json();
   console.log(tFoods);
+  return tFoods;
 }
 
 async function fetchUFoods() {
@@ -363,6 +410,7 @@ async function fetchUFoods() {
   );
   const uFoods = await response.json();
   console.log(uFoods);
+  return uFoods;
 }
 
 async function fetchVFoods() {
@@ -371,6 +419,7 @@ async function fetchVFoods() {
   );
   const vFoods = await response.json();
   console.log(vFoods);
+  return vFoods;
 }
 
 async function fetchWFoods() {
@@ -379,6 +428,7 @@ async function fetchWFoods() {
   );
   const wFoods = await response.json();
   console.log(wFoods);
+  return wFoods;
 }
 
 async function fetchXFoods() {
@@ -387,6 +437,7 @@ async function fetchXFoods() {
   );
   const xFoods = await response.json();
   console.log(xFoods);
+  return xFoods;
 }
 
 async function fetchYFoods() {
@@ -395,6 +446,7 @@ async function fetchYFoods() {
   );
   const yFoods = await response.json();
   console.log(yFoods);
+  return yFoods;
 }
 
 async function fetchZFoods() {
@@ -403,7 +455,9 @@ async function fetchZFoods() {
   );
   const zFoods = await response.json();
   console.log(zFoods);
+  return zFoods;
 }
+
 module.exports = {
   fetchCanada,
   fetchAmerica,
