@@ -1,0 +1,53 @@
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.carousel-item{
+  height: 18rem;
+}
+.carousel-inner{
+  margin-bottom: 10px;
+}
+.card{
+  margin: 1rem;
+}
+.navbar-brand a{
+  display: block;
+  background-image: url(/public/images/tc.png);
+}
+.collapse{
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+.nav-item{
+  margin-right: 20px;
+  border-right: 1px solid black;
+  padding-right: 20px;
+}
+.nav-item:last-child{
+  border-right: none;
+
+}
+.nav-item a{
+  font-size: large;
+}
+.btn{
+  background-color: white;
+  color: black;
+  border: none;
+}
+.btn:hover{
+  background-color: #f4f4f4;
+  color: black;
+}
+
+.container{
+  background-color: #f4f4f4;
+  color: black;
+  max-width: 100%;
+}
