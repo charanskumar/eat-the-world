@@ -3,6 +3,8 @@ var router = express.Router();
 const foodCtrl = require("../controllers/foodItems");
 const fetch = require("node-fetch");
 
+// These contain meal names and pictures - Listed by Region //
+
 router.get("/america", async (req, res) => {
   try {
     const americaFood = await foodCtrl.fetchAmerica();
@@ -223,6 +225,260 @@ router.get("/vietnam", async (req, res) => {
   try {
     const vietnamFood = await foodCtrl.fetchVietnam();
     res.render("region/vietnam", { vietnamFood });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+// These contain meal names and ingredients - Listed by item A-Z //
+
+router.get("/aFoods", async (req, res) => {
+  try {
+    const aFoods = await foodCtrl.fetchAFoods();
+    res.render("/region/canada", { aFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/bFoods", async (req, res) => {
+  try {
+    const bFoods = await foodCtrl.fetchBFoods();
+    res.render("/", { bFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/cFoods", async (req, res) => {
+  try {
+    const cFoods = await foodCtrl.fetchCFoods();
+    res.render("/", { cFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/dFoods", async (req, res) => {
+  try {
+    const dFoods = await foodCtrl.fetchDFoods();
+    res.render("/", { dFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/eFoods", async (req, res) => {
+  try {
+    const eFoods = await foodCtrl.fetchEFoods();
+    res.render("/", { eFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/fFoods", async (req, res) => {
+  try {
+    const fFoods = await foodCtrl.fetchFFoods();
+    res.render("/", { fFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/gFoods", async (req, res) => {
+  try {
+    const gFoods = await foodCtrl.fetchGFoods();
+    res.render("/", { gFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/hFoods", async (req, res) => {
+  try {
+    const hFoods = await foodCtrl.fetchHFoods();
+    res.render("/", { aFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/iFoods", async (req, res) => {
+  try {
+    const iFoods = await foodCtrl.fetchIFoods();
+    res.render("/", { iFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/iFoods", async (req, res) => {
+  try {
+    const iFoods = await foodCtrl.fetchIFoods();
+    res.render("/", { iFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/jFoods", async (req, res) => {
+  try {
+    const jFoods = await foodCtrl.fetchJFoods();
+    res.render("/", { jFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/jFoods", async (req, res) => {
+  try {
+    const jFoods = await foodCtrl.fetchJFoods();
+    res.render("/", { jFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/kFoods", async (req, res) => {
+  try {
+    const kFoods = await foodCtrl.fetchKFoods();
+    res.render("/", { kFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/lFoods", async (req, res) => {
+  try {
+    const lFoods = await foodCtrl.fetchKFoods();
+    res.render("/", { kFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/mFoods", async (req, res) => {
+  try {
+    const mFoods = await foodCtrl.fetchMFoods();
+    res.render("/", { mFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/nFoods", async (req, res) => {
+  try {
+    const nFoods = await foodCtrl.fetchNFoods();
+    res.render("/", { nFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/oFoods", async (req, res) => {
+  try {
+    const oFoods = await foodCtrl.fetchOFoods();
+    res.render("/", { oFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/pFoods", async (req, res) => {
+  try {
+    const pFoods = await foodCtrl.fetchPFoods();
+    res.render("/", { pFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/qFoods", async (req, res) => {
+  try {
+    const qFoods = await foodCtrl.fetchQFoods();
+    res.render("/", { qFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/rFoods", async (req, res) => {
+  try {
+    const rFoods = await foodCtrl.fetchRFoods();
+    res.render("/", { rFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/sFoods", async (req, res) => {
+  try {
+    const sFoods = await foodCtrl.fetchSFoods();
+    res.render("/", { sFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/tFoods", async (req, res) => {
+  try {
+    const tFoods = await foodCtrl.fetchTFoods();
+    res.render("/", { tFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/uFoods", async (req, res) => {
+  try {
+    const uFoods = await foodCtrl.fetchUFoods();
+    res.render("/", { uFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/vFoods", async (req, res) => {
+  try {
+    const vFoods = await foodCtrl.fetchVFoods();
+    res.render("/", { vFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/wFoods", async (req, res) => {
+  try {
+    const wFoods = await foodCtrl.fetchWFoods();
+    res.render("/", { wFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/xFoods", async (req, res) => {
+  try {
+    const xFoods = await foodCtrl.fetchXFoods();
+    res.render("/", { xFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/yFoods", async (req, res) => {
+  try {
+    const yFoods = await foodCtrl.fetchYFoods();
+    res.render("/", { yFoods });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/zFoods", async (req, res) => {
+  try {
+    const zFoods = await foodCtrl.fetchZFoods();
+    res.render("/", { zFoods });
   } catch (err) {
     console.log(err);
   }

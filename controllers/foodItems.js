@@ -1,4 +1,4 @@
-// These contain meal names and pictures //
+// These contain meal names and pictures - Listed by Region //
 
 async function fetchAmerica() {
   const response = await fetch(
@@ -200,6 +200,210 @@ async function fetchVietnam() {
   console.log(vietnam);
 }
 
+// These contain meal names, categories, and ingredients - Listed by item A-Z //
+async function fetchAFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
+  );
+  const aFoods = await response.json();
+  console.log(aFoods);
+}
+async function fetchBFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=b"
+  );
+  const bFoods = await response.json();
+  console.log(bFoods);
+}
+async function fetchCFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=c"
+  );
+  const cFoods = await response.json();
+  console.log(cFoods);
+}
+async function fetchDFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=d"
+  );
+  const dFoods = await response.json();
+  console.log(dFoods);
+}
+async function fetchEFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=e"
+  );
+  const eFoods = await response.json();
+  console.log(eFoods);
+}
+
+async function fetchFFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=f"
+  );
+  const fFoods = await response.json();
+  console.log(fFoods);
+}
+
+async function fetchGFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=g"
+  );
+  const gFoods = await response.json();
+  console.log(gFoods);
+}
+
+async function fetchHFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=h"
+  );
+  const hFoods = await response.json();
+  console.log(hFoods);
+}
+
+async function fetchIFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=i"
+  );
+  const iFoods = await response.json();
+  console.log(iFoods);
+}
+
+async function fetchJFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=j"
+  );
+  const jFoods = await response.json();
+  console.log(jFoods);
+}
+
+async function fetchKFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=k"
+  );
+  const kFoods = await response.json();
+  console.log(kFoods);
+}
+
+async function fetchLFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=l"
+  );
+  const lFoods = await response.json();
+  console.log(lFoods);
+}
+
+async function fetchMFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=m"
+  );
+  const mFoods = await response.json();
+  console.log(mFoods);
+}
+
+async function fetchNFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=n"
+  );
+  const nFoods = await response.json();
+  console.log(nFoods);
+}
+
+async function fetchOFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=o"
+  );
+  const oFoods = await response.json();
+  console.log(oFoods);
+}
+
+async function fetchPFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=p"
+  );
+  const pFoods = await response.json();
+  console.log(pFoods);
+}
+
+async function fetchQFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=q"
+  );
+  const qFoods = await response.json();
+  console.log(qFoods);
+}
+
+async function fetchRFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=r"
+  );
+  const rFoods = await response.json();
+  console.log(rFoods);
+}
+
+async function fetchSFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=s"
+  );
+  const sFoods = await response.json();
+  console.log(sFoods);
+}
+
+async function fetchTFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=t"
+  );
+  const tFoods = await response.json();
+  console.log(tFoods);
+}
+
+async function fetchUFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=u"
+  );
+  const uFoods = await response.json();
+  console.log(uFoods);
+}
+
+async function fetchVFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=v"
+  );
+  const vFoods = await response.json();
+  console.log(vFoods);
+}
+
+async function fetchWFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=w"
+  );
+  const wFoods = await response.json();
+  console.log(wFoods);
+}
+
+async function fetchXFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=x"
+  );
+  const xFoods = await response.json();
+  console.log(xFoods);
+}
+
+async function fetchYFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=y"
+  );
+  const yFoods = await response.json();
+  console.log(yFoods);
+}
+
+async function fetchZFoods() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=z"
+  );
+  const zFoods = await response.json();
+  console.log(zFoods);
+}
 module.exports = {
   fetchCanada,
   fetchAmerica,
@@ -226,4 +430,30 @@ module.exports = {
   fetchThailand,
   fetchTunisia,
   fetchVietnam,
+  fetchAFoods,
+  fetchBFoods,
+  fetchCFoods,
+  fetchDFoods,
+  fetchEFoods,
+  fetchFFoods,
+  fetchGFoods,
+  fetchHFoods,
+  fetchIFoods,
+  fetchJFoods,
+  fetchKFoods,
+  fetchLFoods,
+  fetchMFoods,
+  fetchNFoods,
+  fetchOFoods,
+  fetchPFoods,
+  fetchQFoods,
+  fetchRFoods,
+  fetchSFoods,
+  fetchTFoods,
+  fetchUFoods,
+  fetchVFoods,
+  fetchWFoods,
+  fetchXFoods,
+  fetchYFoods,
+  fetchZFoods,
 };
