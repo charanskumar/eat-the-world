@@ -2,4 +2,11 @@
 
 <h1><%= cuisine.toUpperCase() %></h1>
 
-<%- include('../partials/footer') -%>
+<% areaFoods.meals.forEach(function(meal) { %>
+<a href="/food/meal/<%= meal.idMeal %>">
+  <%= meal.strMeal %>
+  <br />
+  <img src="<%= meal.strMealThumb %>" alt="Food Picture" />
+  <br /><br />
+</a>
+<% }); %> <%- include('../partials/footer') -%>
