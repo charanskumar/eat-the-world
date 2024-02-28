@@ -5,4 +5,7 @@ const cuisinesCtrl = require('../controllers/cuisines');
 // GET cuisine's Main Page
 router.get('/:id', cuisinesCtrl.index);
 
+// GET cuisine/:id subCuisins
+router.get('/:id/show', cuisinesCtrl.show);
+
 module.exports = router;

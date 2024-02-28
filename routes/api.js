@@ -1,7 +1,6 @@
 var express = require("express");
 var router = express.Router();
 const foodCtrl = require("../controllers/foodItems");
-const fetch = require("node-fetch");
 
 router.get("/region/:strArea", async (req, res) => {
   const { strArea } = req.params;
