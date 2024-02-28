@@ -1,5 +1,13 @@
 <%- include('../partials/header') -%>
-<img src="<%= areaFoods.meals.strMealThumb %>" alt="Food Picture" />
+<h1><%= foodItem.meals[0].strMeal %></h1>
+
+<% foodItem.meals.forEach(function(meal) { %>
+
+<img src="<%= meal.strMealThumb %>" alt="Food Picture" />
+<br /><br />
+
+<% }); %>
+
 <h1><%= foodItem.meals[0].strMeal %></h1>
 <ul>
   <li><%= foodItem.meals[0].strIngredient1 %></li>
