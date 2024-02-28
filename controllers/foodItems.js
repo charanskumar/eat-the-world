@@ -12,10 +12,10 @@ async function fetchFoodId(idMeal) {
 async function fetchFoodByArea(strArea) {
   console.log("Ctrl String: ", strArea);
   const response = await fetch(
-    `https://www.themealdb.com/api/json/v1/1/lookup.php?a=${strArea}/`
+    `https://www.themealdb.com/api/json/v1/1/filter.php?a=${strArea}`
   );
-  const data = response.json();
-  console.log(data);
+  const data = await response.json();
+  console.log("Promise?: ", data);
   return data;
 }
 

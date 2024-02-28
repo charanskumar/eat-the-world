@@ -5,7 +5,7 @@ const fetch = require("node-fetch");
 
 router.get("/region/:strArea", async (req, res) => {
   const { strArea } = req.params;
-  console.log('Router Str: ', strArea);
+  console.log("Router Str: ", strArea);
   try {
     const areaFoods = await foodCtrl.fetchFoodByArea(strArea);
     res.render(`cuisine/index`, { areaFoods, cuisine: strArea });
