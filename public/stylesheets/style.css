@@ -1,10 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
+  font-family: "Open Sans", sans-serif;
 }
 
 .login {
@@ -15,18 +11,7 @@ a {
 }
 
 .login img {
-  height: 30px;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav > a {
-  margin-right: 10px;
-  font-size: 20px;
+  height: 40px 0 30 0;
 }
 
 .title, p {
@@ -34,4 +19,97 @@ nav > a {
   justify-content: center;
   align-items: center;
   margin-top: 0;
+}
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.carousel-item{
+  height: 18rem;
+}
+.carousel-inner{
+  margin-bottom: 10px;
+}
+.navBrand-container{
+  display: inline-block;
+  width: 100%;
+}
+.navbar{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px 30px;
+  transition: all 0.3s ease;
+  z-index: 999;
+  background-image: linear-gradient(to right, rgb(103, 103, 103),rgb(229, 225, 225) ,rgb(255, 255, 255));
+  opacity: 0.6;
+}
+.nav-item{
+  margin-right: 20px;
+  border-right: 1px solid black;
+  padding-right: 20px;
+}
+.nav-item:last-child{
+  border-right: none;
+}
+.banner {
+  background-image: url('/public/images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.container-fluid{
+  max-width: 90%;
+}
+.section-text{
+  margin: 40px 0;
+  text-align: center;
+}
+.card{
+  margin: 1rem;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+.card-header{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  text-decoration: none;
+  font-size: 35px;
+}
+.country-container{
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+}
+.flag{
+  display: inline;
+  width: 24px;
+  margin-left: 1px;
+  margin-right: 0.2px;
+}
+
+.btn{
+  background-color: white;
+  color: black;
+  border: none;
+}
+.btn:hover{
+  background-color: #f4f4f4;
+  color: black;
+}
+.cuisine-header{
+  margin: 20px;
+}
+.maintxt img{
+  opacity: 0.5;
+}
+.maintxt img:hover {
+  opacity: 1.0; 
 }

@@ -1,69 +1,85 @@
-<%- include('../partials/header') -%>
+<%- include('../partials/nav') -%>
+<section class="banner">
 
-<h1><%= cuisine.toUpperCase() %></h1>
-    <% if (cuisine === 'american') { %>
-        <div>
-            <% foodCategories.forEach(c => { %>
-                <div>
-                    <h3><%= c.cat %></h3>
-                    <img src="<%= c.image %>">
+  </section>
+          <h1 class="cuisine-header"><%= cuisine.toUpperCase() %></h1>
+    <% if (cuisine==='american' )
+     { %>
+        <p>American cuisine is a delightful fusion of flavors from around the world, offering hearty classics like burgers and apple pie alongside spicy Tex-Mex dishes and comforting Southern BBQ. Its a diverse and delicious journey through the tastes of the USA.</p>
+        <div class="row d-flex justify-content-center">
+          
+
+                 </a>
+                 </div>
+                 </div>
                 </div>
-            <% }) %>
+                <% }) %>
         </div>
-    <% } else if (cuisine === 'indian') { %>
-        <div>
-            <% foodCategories.forEach(c => { %>
-                <div>
-                    <h3><%= c.cat %></h3>
-                    <img src="<%= c.image %>">
-                </div>
-            <% }) %>
-        </div>
-    <% } else if (cuisine === 'chinese') { %>
-        <div>
-            <% foodCategories.forEach(c => { %>
-                <div>
-                    <h3><%= c.cat %></h3>
-                    <img src="<%= c.image %>">
-                </div>
-            <% }) %>
-        </div>
-    <% } else if (cuisine === 'italian') { %>
-        <div>
-            <% foodCategories.forEach(c => { %>
-                <div>
-                    <h3><%= c.cat %></h3>
-                    <img src="<%= c.image %>">
-                </div>
-            <% }) %>
-        </div>
-    <% } else if (cuisine === 'mexican') { %>
-        <div>
-            <% foodCategories.forEach(c => { %>
-                <div>
-                    <h3><%= c.cat %></h3>
-                    <img src="<%= c.image %>">
-                </div>
-            <% }) %>
-        </div>
-    <% } else if (cuisine === 'german') { %>
-        <div>
-            <% foodCategories.forEach(c => { %>
-                <div>
-                    <h3><%= c.cat %></h3>
-                    <img src="<%= c.image %>">
-                </div>
-            <% }) %>
-        </div>
-    <% } else if (cuisine === 'mediterranean') { %>
-    <div>
-        <% foodCategories.forEach(c => { %>
+        <% } else if (cuisine==='indian' ) { %>
             <div>
-                <h3><%= c.cat %></h3>
+                <% foodCategories.forEach(c=> { %>
+                    <div>
+                        <h3>
+                            <%= c.cat %>
+                        </h3>
+                        <img src="<%= c.image %>">
+                    </div>
+                    <% }) %>
+            </div>
+            <% } else if (cuisine==='chinese' ) { %>
+                <div>
+                    <% foodCategories.forEach(c=> { %>
+                        <div>
+                            <h3>
+                                <%= c.cat %>
+                            </h3>
+                            <img src="<%= c.image %>">
+                        </div>
+                        <% }) %>
+                </div>
+                <% } else if (cuisine==='italian' ) { %>
+                    <div>
+                        <% foodCategories.forEach(c=> { %>
+            <div>
+                <h3>
+                    <%= c.cat %>
+                </h3>
                 <img src="<%= c.image %>">
             </div>
-        <% }) %>
+            <% }) %>
     </div>
-    <% }; %>
-    
-<%- include('../partials/footer') -%>
+    <% } else if (cuisine==='mexican' ) { %>
+        <div>
+            <% foodCategories.forEach(c=> { %>
+                <div>
+                    <h3>
+                        <%= c.cat %>
+                    </h3>
+                    <img src="<%= c.image %>">
+                </div>
+                <% }) %>
+        </div>
+        <% } else if (cuisine==='german' ) { %>
+            <div>
+                <% foodCategories.forEach(c=> { %>
+                    <div>
+                        <h3>
+                            <%= c.cat %>
+                        </h3>
+                        <img src="<%= c.image %>">
+                    </div>
+                    <% }) %>
+            </div>
+            <% } else if (cuisine==='mediterranean' ) { %>
+                <div>
+                    <% foodCategories.forEach(c=> { %>
+                        <div>
+                            <h3>
+                                <%= c.cat %>
+                            </h3>
+                            <img src="<%= c.image %>">
+                        </div>
+                        <% }) %>
+                </div>
+                <% }; %>
+                    <%- include('../partials/footer') -%>
