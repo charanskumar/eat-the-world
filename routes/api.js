@@ -12,9 +12,13 @@ router.get("/region/:strArea", async (req, res) => {
     console.error(error);
   }
 });
+//....
 
-router.get("/meal/:idMeal", async (req, res) => {
-  const { idMeal } = req.params;
+
+//const {isMeal} = req.param,//handel id coming from my DB
+
+router.get("/meal/:idMeal", async (req, res) => { 
+  const { idMeal } = req.params; 
   try {
     const foodItem = await foodCtrl.fetchFoodId(idMeal);
     res.render("cuisine/singleMeal", { foodItem });

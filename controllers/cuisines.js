@@ -12,9 +12,4 @@ function index(req, res) {
 }
 function show(req, res){
     const cuisine = req.params.id;
-    const foodCategories = cuisineCardsInfo[cuisine];
-    res.render('cuisine/show',
-        {cuisine: cuisine, foodCategories: foodCategories});
-            console.log(foodCategories)
-
-    }
+        res.render("cuisine/show", { title: "Eat the World" });}

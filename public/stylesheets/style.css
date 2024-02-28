@@ -1,8 +1,13 @@
 body {
-  padding: 50px;
   font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
-
+a{
+  text-decoration: none;
+  color: black;
+}
 .login {
   display: flex;
   justify-content: center;
@@ -31,18 +36,14 @@ body {
   margin-bottom: 10px;
 }
 .navBrand-container{
-  display: inline-block;
   width: 100%;
 }
 .navbar{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  padding: 10px 30px;
-  transition: all 0.3s ease;
-  z-index: 999;
   background-image: linear-gradient(to right, rgb(103, 103, 103),rgb(229, 225, 225) ,rgb(255, 255, 255));
-  opacity: 0.6;
+  opacity: 0.8;
 }
 .nav-item{
   margin-right: 20px;
@@ -51,6 +52,10 @@ body {
 }
 .nav-item:last-child{
   border-right: none;
+}
+.nav-item a{
+  color: black;
+  font-weight: bold;
 }
 .banner {
   background-image: url('/public/images/bg.jpg');
@@ -63,6 +68,7 @@ body {
   align-items: center;
   text-align: center;
 }
+
 .container-fluid{
   max-width: 90%;
 }
@@ -104,12 +110,26 @@ body {
   background-color: #f4f4f4;
   color: black;
 }
-.cuisine-header{
+.subPages-header{
   margin: 20px;
+
 }
 .maintxt img{
   opacity: 0.5;
 }
 .maintxt img:hover {
   opacity: 1.0; 
+}
+footer{
+  background-color: rgb(244, 244, 245);
+}
+.subCuisine-list{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: start;
+  
+}
+.subCuisine-list li{
+  border-bottom: 1px solid black;
 }

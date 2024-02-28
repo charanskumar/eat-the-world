@@ -51,25 +51,6 @@ const cuisineCatCards = {
         {cat: 'Beverages'}
     ]
 }
-const cuisineCardsInfo = {
-    Appetizers: [
-        {apit: 'x'},
-        {apit: 'y'},
-        {apit: 'f'},
-        {apit: 'z'},
-        {apit: 'n'}
-    ],
-    Entrees: [
-        {cat: 'Appetizers'},
-        {cat: 'Entrees'},
-        {cat: 'Sides'},
-        {cat: 'Deserts'},
-        {cat: 'Beverages'}
-    ]}
-module.exports = cuisineCatCards;
-module.exports = cuisineCardsInfo;
-module.exports = getAll();
 
-function getAll(){
-    return cuisineCardsInfo;
-}
+module.exports = cuisineCatCards;    
+   
