@@ -1,0 +1,5 @@
+<%- include('../partials/header') -%> <% areaList.meals.forEach(function(area){
+%> |
+<a href="/food/region/<%= area.strArea %>"><%= area.strArea %></a>
+
+<% } ); %> <%- include('../partials/footer') -%>

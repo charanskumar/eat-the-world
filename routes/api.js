@@ -3,8 +3,38 @@ var router = express.Router();
 const foodCtrl = require("../controllers/foodItems");
 const fetch = require("node-fetch");
 
-// These contain meal names and pictures - Listed by Region //
+router.get("/region/:strArea", async (req, res) => {
+  const { strArea } = req.params;
+  console.log('Router Str: ', strArea);
+  try {
+    const areaFoods = await foodCtrl.fetchFoodByArea(strArea);
+    res.render(`cuisine/index`, { areaFoods, cuisine: strArea });
+  } catch (error) {
+    console.error(error);
+  }
+});
 
+router.get("/food/:idMeal", async (req, res) => {
+  const { idMeal } = req.params;
+  try {
+    const foodItem = await foodCtrl.fetchFoodByArea(idMeal);
+    res.render("food/foodDetail", { foodItem });
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+router.get("/regions", async (req, res) => {
+  try {
+    const areaList = await foodCtrl.fetchAreaList();
+    console.log("Router: ", areaList);
+    res.render("region/index", { areaList });
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+// These contain meal names and pictures - Listed by Region //
 router.get("/america", async (req, res) => {
   try {
     const americaFood = await foodCtrl.fetchAmerica();
@@ -31,8 +61,6 @@ router.get("/canada", async (req, res) => {
     console.log(err);
   }
 });
-
-
 
 router.get("/china", async (req, res) => {
   try {
