@@ -33,4 +33,25 @@ router.get("/regions", async (req, res) => {
   }
 });
 
+router.get("/category/:strCategory", async (req, res) => {
+  const { strCategory } = req.params;
+  console.log("Router Str: ", strCategory);
+  try {
+    const areaFoods = await foodCtrl.fetchFoodByCategory(strCategory);
+    res.render(`category/index`, { areaFoods, cuisine: strCategory });
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+router.get("/category", async (req, res) => {
+  try {
+    const categoryList = await foodCtrl.fetchCategoryList();
+    console.log("Router: ", categoryList);
+    res.render("categories/index", { categoryList });
+  } catch (error) {
+    console.error(error);
+  }
+});
+
 module.exports = router;

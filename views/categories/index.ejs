@@ -1,0 +1,8 @@
+<%- include('../partials/header') -%>
+
+<H1>Food By Category</H1>
+
+<% categoryList.meals.forEach(function(area){ %> |
+<a href="/food/category/<%= area.strCategory %>"><%= area.strCategory %></a>
+
+<% } ); %> <%- include('../partials/footer') -%>
