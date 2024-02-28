@@ -1,3 +1,11 @@
-<%- include('../partials/header') -%> canada 
-<!-- canada.meals.strMeal.forEach(meal) meal.strMeal  -->
+<%- include('../partials/header') -%> <%- include('../partials/areaMenu') -%>
+
+<h1>Canada Foods</h1>
+
+<ul>
+  <% for (const foodItem of canadaFood.meals) { %>
+  <li><%= foodItem.strMeal %></li>
+  <% } %>
+</ul>
+
 <%- include('../partials/footer') -%>
