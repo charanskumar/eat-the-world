@@ -38,7 +38,7 @@ router.get("/category/:strCategory", async (req, res) => {
   console.log("Router Str: ", strCategory);
   try {
     const areaFoods = await foodCtrl.fetchFoodByCategory(strCategory);
-    res.render(`category/index`, { areaFoods, cuisine: strCategory });
+    res.render(`cuisine/mealByCat`, { areaFoods, cuisine: strCategory });
   } catch (error) {
     console.error(error);
   }
