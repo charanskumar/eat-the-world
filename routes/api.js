@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-const foodCtrl = require("../controllers/foodItems");
+const foodCtrl = require("../controllers/items");
 
 router.get("/region/:strArea", async (req, res) => {
   const { strArea } = req.params;
