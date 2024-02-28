@@ -1,10 +1,11 @@
 var express = require("express");
 var router = express.Router();
-const foodCtrl = require("../controllers/foodItems");
+const foodCtrl = require("../controllers/items");
+const Item = require('../models/item');
 
 router.get("/region/:strArea", async (req, res) => {
   const { strArea } = req.params;
-  console.log("Router Str: ", strArea);
+  //console.log("Router Str: ", strArea);
   try {
     const areaFoods = await foodCtrl.fetchFoodByArea(strArea);
     res.render(`cuisine/index`, { areaFoods, cuisine: strArea });
@@ -17,11 +18,16 @@ router.get("/region/:strArea", async (req, res) => {
 
 //const {isMeal} = req.param,//handel id coming from my DB
 
-router.get("/meal/:idMeal", async (req, res) => { 
-  const { idMeal } = req.params; 
+router.get("/meal/:idMeal", async (req, res) => {
+  const { idMeal } = req.params;
+  console.log(idMeal);
+  const item = await Item.find({idMeal:idMeal});
+  //const savedItem = await item.save();
+  console.log('Item retrieved:', item);
+  //const { idMeal } = req.params;
   try {
     const foodItem = await foodCtrl.fetchFoodId(idMeal);
-    res.render("cuisine/singleMeal", { foodItem });
+    res.render("cuisine/singleMeal", { foodItem, item });
   } catch (error) {
     console.error(error);
   }
@@ -30,7 +36,7 @@ router.get("/meal/:idMeal", async (req, res) => {
 router.get("/regions", async (req, res) => {
   try {
     const areaList = await foodCtrl.fetchAreaList();
-    console.log("Router: ", areaList);
+    //console.log("Router: ", areaList);
     res.render("region/index", { areaList });
   } catch (error) {
     console.error(error);
