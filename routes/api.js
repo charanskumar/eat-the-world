@@ -1,7 +1,6 @@
 var express = require("express");
 var router = express.Router();
 const foodCtrl = require("../controllers/foodItems");
-const fetch = require("node-fetch");
 
 // These contain meal names and pictures - Listed by Region //
 
