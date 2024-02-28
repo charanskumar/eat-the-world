@@ -1,6 +1,8 @@
 body {
-  padding: 50px;
   font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 .login {
@@ -31,18 +33,13 @@ body {
   margin-bottom: 10px;
 }
 .navBrand-container{
-  display: inline-block;
   width: 100%;
 }
 .navbar{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  padding: 10px 30px;
-  transition: all 0.3s ease;
-  z-index: 999;
   background-image: linear-gradient(to right, rgb(103, 103, 103),rgb(229, 225, 225) ,rgb(255, 255, 255));
-  opacity: 0.6;
 }
 .nav-item{
   margin-right: 20px;
