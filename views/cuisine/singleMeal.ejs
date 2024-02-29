@@ -1,34 +1,70 @@
 <%- include('../partials/nav') -%>
-<div class="container-fluid singleMeal d-flex justify-content-center">
-<h1 class="subPage-header"><%= foodItem.meals[0].strMeal %></h1>
-<% foodItem.meals.forEach(function(meal) { %>
-  <img class="img-fluid img-thumbnail" src="<%= meal.strMealThumb %>" alt="Food Picture" />
-<br /><br />
-
-<% }); %>
-
-<h1><%= foodItem.meals[0].strMeal %></h1>
-<ul>
-  <li><%= foodItem.meals[0].strIngredient1 %></li>
-  <li><%= foodItem.meals[0].strIngredient2 %></li>
-  <li><%= foodItem.meals[0].strIngredient3 %></li>
-  <li><%= foodItem.meals[0].strIngredient4 %></li>
-  <li><%= foodItem.meals[0].strIngredient5 %></li>
-  <li><%= foodItem.meals[0].strIngredient6 %></li>
-  <li><%= foodItem.meals[0].strIngredient7 %></li>
-  <li><%= foodItem.meals[0].strIngredient8 %></li>
-  <li><%= foodItem.meals[0].strIngredient9 %></li>
-  <li><%= foodItem.meals[0].strIngredient10 %></li>
-  <li><%= foodItem.meals[0].strIngredient11 %></li>
-  <li><%= foodItem.meals[0].strIngredient12 %></li>
-  <li><%= foodItem.meals[0].strIngredient13 %></li>
-  <li><%= foodItem.meals[0].strIngredient14 %></li>
-  <li><%= foodItem.meals[0].strIngredient15 %></li>
-  <li><%= foodItem.meals[0].strIngredient16 %></li>
-  <li><%= foodItem.meals[0].strIngredient17 %></li>
-  <li><%= foodItem.meals[0].strIngredient18 %></li>
-  <li><%= foodItem.meals[0].strIngredient19 %></li>
-  <li><%= foodItem.meals[0].strIngredient20 %></li>
+<h1><%= item.name %></h1>
+<p><%= item.ingredients %></p>
+<ul><!--
+  <li><%= //item.meals[0].strIngredient1 %></li>
+  <li><%= //item.meals[0].strIngredient2 %></li>
+  <li><%= //item.meals[0].strIngredient3 %></li>
+  <li><%= //item.meals[0].strIngredient4 %></li>
+  <li><%= //item.meals[0].strIngredient5 %></li>
+  <li><%= //item.meals[0].strIngredient6 %></li>
+  <li><%= //item.meals[0].strIngredient7 %></li>
+  <li><%= //item.meals[0].strIngredient8 %></li>
+  <li><%= //item.meals[0].strIngredient9 %></li>
+  <li><%= //item.meals[0].strIngredient10 %></li>
+  <li><%= //item.meals[0].strIngredient11 %></li>
+  <li><%= //item.meals[0].strIngredient12 %></li>
+  <li><%= //item.meals[0].strIngredient13 %></li>
+  <li><%= //item.meals[0].strIngredient14 %></li>
+  <li><%= //item.meals[0].strIngredient15 %></li>
+  <li><%= //item.meals[0].strIngredient16 %></li>
+  <li><%= //item.meals[0].strIngredient17 %></li>
+  <li><%= //item.meals[0].strIngredient18 %></li>
+  <li><%= //item.meals[0].strIngredient19 %></li>
+  <li><%= //item.meals[0].strIngredient20 %></li>-->
 </ul>
-</div>
+
+<br><br><h2>Reviews</h2>
+<% if (user) { %>
+<form id="add-review-form" method="POST"
+  action="/food/meal/<%= item.idMeal %>/reviews">
+  <label>Review:</label>
+  <textarea name="content"></textarea>
+  <label>Rating:</label>
+  <select name="rating">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  <input type="submit" value="Add Review">
+</form>
+<% } %>
+
+<% if (item.reviews.length) { %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Review</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% let total = 0 %>
+      <% item.reviews.forEach(function(r) { %>
+        <% total += r.rating %>
+        <tr>
+          <td><%= r.userName %></td>
+          <td><%= r.createdAt.toLocaleDateString() %></td>
+          <td><%= r.content %></td>
+          <td><%= r.rating %></td>
+        </tr>
+      <% }); %>
+<% } else { %>
+  <h4>No Reviews Yet</h4>
+<% } %>
+
 <%- include('../partials/footer') -%>
