@@ -28,8 +28,29 @@ async function fetchAreaList() {
   return data;
 }
 
+async function fetchFoodByCategory(strCategory) {
+  console.log("Ctrl String: ", strCategory);
+  const response = await fetch(
+    `https://www.themealdb.com/api/json/v1/1/filter.php?c=${strCategory}`
+  );
+  const data = await response.json();
+  console.log("Promise?: ", data);
+  return data;
+}
+
+async function fetchCategoryList() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/list.php?c=list"
+  );
+  const data = await response.json();
+  console.log("list:", data);
+  return data;
+}
+
 module.exports = {
   fetchFoodId,
   fetchFoodByArea,
   fetchAreaList,
+  fetchFoodByCategory,
+  fetchCategoryList,
 };

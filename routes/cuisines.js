@@ -8,6 +8,4 @@ router.get('/:id', cuisinesCtrl.index);
 // GET cuisine/:id subCuisins
 router.get('/:id/show', cuisinesCtrl.show);
 
-//GET
-
 module.exports = router;

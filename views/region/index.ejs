@@ -1,5 +1,7 @@
-<%- include('../partials/header') -%> <% areaList.meals.forEach(function(area){
-%> |
-<a href="/food/region/<%= area.strArea %>"><%= area.strArea %></a>
-
-<% } ); %> <%- include('../partials/footer') -%>
+<%- include('../partials/nav') -%> 
+<h1 class="subPage-header"> A Tour of Global Cuisines by Region</h1>
+<!-- <% areaList.meals.forEach(function(area){%> 
+    <a href="/food/region/<%= area.strArea %>"><%= area.strArea %></a>    
+<% } ); %> -->
+<%- include('../map') -%> 
+<%- include('../partials/footer') -%>

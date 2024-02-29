@@ -15,7 +15,6 @@ var usersRouter = require("./routes/users");
 var apiRouter = require("./routes/api");
 
 const cuisinesRouter = require("./routes/cuisines");
-const reviewsRouter = require('./routes/reviews');
 
 var app = express();
 
@@ -51,7 +50,6 @@ app.use("/users", usersRouter);
 app.use("/food", apiRouter);
 
 app.use("/cuisine", cuisinesRouter);
-app.use('/', reviewsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

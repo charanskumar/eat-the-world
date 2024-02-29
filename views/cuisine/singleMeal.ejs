@@ -1,5 +1,12 @@
-<%- include('../partials/header') -%>
-<img src="<%= areaFoods.meals.strMealThumb %>" alt="Food Picture" />
+<%- include('../partials/nav') -%>
+<div class="container-fluid singleMeal d-flex justify-content-center">
+<h1 class="subPage-header"><%= foodItem.meals[0].strMeal %></h1>
+<% foodItem.meals.forEach(function(meal) { %>
+  <img class="img-fluid img-thumbnail" src="<%= meal.strMealThumb %>" alt="Food Picture" />
+<br /><br />
+
+<% }); %>
+
 <h1><%= foodItem.meals[0].strMeal %></h1>
 <ul>
   <li><%= foodItem.meals[0].strIngredient1 %></li>
@@ -23,46 +30,5 @@
   <li><%= foodItem.meals[0].strIngredient19 %></li>
   <li><%= foodItem.meals[0].strIngredient20 %></li>
 </ul>
-
-<br><br><h2>Reviews</h2>
-<form id="add-review-form" method="POST"
-  action="/meal/<%= foodItem._id %>/reviews">
-  <label>Review:</label>
-  <textarea name="content"></textarea>
-  <label>Rating:</label>
-  <select name="rating">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5" selected>5</option>
-  </select>
-  <input type="submit" value="Add Review">
-</form>
-
-<% if (item.reviews.length) { %>
-  <table>
-    <thead>
-      <tr>
-        <th>User</th>
-        <th>Date</th>
-        <th>Review</th>
-        <th>Rating</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% let total = 0 %>
-      <% item.reviews.forEach(function(r) { %>
-        <% total += r.rating %>
-        <tr>
-          <td><%= r.createdAt.toLocaleDateString() %></td>
-          <td><%= r.content %></td>
-          <td><%= r.rating %></td>
-        </tr>
-      <% }); %>
-<% } else { %>
-  <h4>No Reviews Yet</h4>
-<% } %>
-
+</div>
 <%- include('../partials/footer') -%>

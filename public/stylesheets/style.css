@@ -3,22 +3,16 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  background-color: rgb(45, 42, 42);
+  color: white;
 }
 a{
   text-decoration: none;
   color: black;
 }
-.login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 34px;
+li{
+  list-style: none;
 }
-
-.login img {
-  height: 40px 0 30 0;
-}
-
 .title, p {
   display: flex;
   justify-content: center;
@@ -35,30 +29,33 @@ body {
 .carousel-inner{
   margin-bottom: 10px;
 }
-.navBrand-container{
-  width: 100%;
-}
+
 .navbar{
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  background-image: linear-gradient(to right, rgb(103, 103, 103),rgb(229, 225, 225) ,rgb(255, 255, 255));
-  opacity: 0.8;
+  background-color: rgb(184, 115, 51);
+  padding-left: 30px;
 }
 .nav-item{
   margin-right: 20px;
   border-right: 1px solid black;
   padding-right: 20px;
 }
-.nav-item:last-child{
+.nav-item:last-child {
   border-right: none;
+  float: right;
 }
 .nav-item a{
   color: black;
   font-weight: bold;
 }
+.login {
+  float: right;
+  margin-right: 0;
+  background-color: transparent;
+  border: 1px black solid;
+  padding: 9px;
+}
 .banner {
-  background-image: url('/public/images/bg.jpg');
+  background-image: url('/public/images/ban1.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -67,8 +64,8 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  opacity: 0.6;
 }
-
 .container-fluid{
   max-width: 90%;
 }
@@ -78,7 +75,7 @@ body {
 }
 .card{
   margin: 1rem;
-  box-shadow: 10px 10px 5px #aaaaaa;
+  box-shadow: 10px 10px 5px #3e3e3e;
 }
 .card-header{
   position: absolute;
@@ -110,9 +107,9 @@ body {
   background-color: #f4f4f4;
   color: black;
 }
-.subPages-header{
+.subPage-header{
   margin: 20px;
-
+  color: white;
 }
 .maintxt img{
   opacity: 0.5;
@@ -121,7 +118,13 @@ body {
   opacity: 1.0; 
 }
 footer{
-  background-color: rgb(244, 244, 245);
+  color: white;
+  border-top: 1px soild rgb(184, 115, 51);
+  
+}
+hr{
+  margin-top: 80px;
+  color: rgb(184, 115, 51);;
 }
 .subCuisine-list{
   display: flex;
@@ -132,4 +135,33 @@ footer{
 }
 .subCuisine-list li{
   border-bottom: 1px solid black;
+}
+
+/* by region */
+svg{
+  margin-top: 50px;
+}
+svg a{
+  fill: rgb(184, 115, 51);
+  stroke: black;
+  stroke-width: .25;
+}
+svg path:hover{
+  fill: #006284;
+  transition: 0.6;
+  cursor: pointer;
+}
+
+.singleMeal{
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 28px;
+}
+.singleMeal img{
+  margin-top: 30px;
+  height: 60vh;
+  width: 70%;
+}
+.singleCard{
+  display: grid;
 }

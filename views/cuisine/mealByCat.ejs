@@ -1,5 +1,7 @@
-<%- include('../partials/header') -%> <% areaFoods.meals.forEach(function(meal)
+<%- include('../partials/header') -%> 
+<% areaFoods.meals.forEach(function(meal)
 { %>
+  
 <a href="/food/meal/<%= meal.idMeal %>">
   <%= meal.strMeal %>
   <br />
