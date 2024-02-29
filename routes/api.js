@@ -30,7 +30,7 @@ router.get("/meal/:idMeal", async (req, res) => {
         idMeal: foodItem.meals[0].idMeal,
         ingredients: `${foodItem.meals[0].strIngredient1}, ${foodItem.meals[0].strIngredient2}, ${foodItem.meals[0].strIngredient3}, ${foodItem.meals[0].strIngredient4}, ${foodItem.meals[0].strIngredient5}`
       });
-      item = await item.save();
+      await item.save();
     }
     console.log(item.idMeal);
     console.log(item._id);
