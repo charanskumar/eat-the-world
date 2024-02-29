@@ -10,8 +10,8 @@ async function create(req, res) {
     const item = await Item.findOne({idMeal});
     console.log(idMeal);
     console.log(item);
-    //req.body.user = req.user._id;
-    //req.body.userName = req.user.name;
+    req.body.user = req.user._id;
+    req.body.userName = req.user.name;
     item.reviews.push(req.body);
     //try {
         await item.save();

@@ -25,6 +25,7 @@
 </ul>
 
 <br><br><h2>Reviews</h2>
+<% if (user) { %>
 <form id="add-review-form" method="POST"
   action="/food/meal/<%= item.idMeal %>/reviews">
   <label>Review:</label>
@@ -35,10 +36,11 @@
     <option value="2">2</option>
     <option value="3">3</option>
     <option value="4">4</option>
-    <option value="5" selected>5</option>
+    <option value="5">5</option>
   </select>
   <input type="submit" value="Add Review">
 </form>
+<% } %>
 
 <% if (item.reviews.length) { %>
   <table>
@@ -48,7 +50,6 @@
         <th>Date</th>
         <th>Review</th>
         <th>Rating</th>
-        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -56,6 +57,7 @@
       <% item.reviews.forEach(function(r) { %>
         <% total += r.rating %>
         <tr>
+          <td><%= r.userName %></td>
           <td><%= r.createdAt.toLocaleDateString() %></td>
           <td><%= r.content %></td>
           <td><%= r.rating %></td>
