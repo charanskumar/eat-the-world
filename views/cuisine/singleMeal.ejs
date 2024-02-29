@@ -1,4 +1,4 @@
-<%- include('../partials/header') -%>
+<%- include('../partials/nav') -%>
 <h1><%= foodItem.meals[0].strMeal %></h1>
 
 <% foodItem.meals.forEach(function(meal) { %>
@@ -10,16 +10,20 @@
 
 <h1><%= foodItem.meals[0].strMeal %></h1>
 <p>
-    <% for (let i = 1; i <= 20; i++) { %> <% if
-    (foodItem.meals[0][`strIngredient${i}`]) { %> <%=
-    foodItem.meals[0][`strIngredient${i}`] %><% if (i < 20 &&
-    foodItem.meals[0][`strIngredient${i + 1}`]) { %>, <% } %><% } %><% } %>
-  </p>
+  <% for (let i = 1; i <= 20; i++) { %> <% if
+  (foodItem.meals[0][`strIngredient${i}`]) { %> <%=
+  foodItem.meals[0][`strIngredient${i}`] %><% if (i < 20 &&
+  foodItem.meals[0][`strIngredient${i + 1}`]) { %>, <% } %><% } %><% } %>
+</p>
 
-  br><br><h2>Reviews</h2>
+<br /><br />
+<h2>Reviews</h2>
 <% if (user) { %>
-<form id="add-review-form" method="POST"
-  action="/food/meal/<%= item.idMeal %>/reviews">
+<form
+  id="add-review-form"
+  method="POST"
+  action="/food/meal/<%= item.idMeal %>/reviews"
+>
   <label>Review:</label>
   <textarea name="content"></textarea>
   <label>Rating:</label>
@@ -30,33 +34,29 @@
     <option value="4">4</option>
     <option value="5">5</option>
   </select>
-  <input type="submit" value="Add Review">
+  <input type="submit" value="Add Review" />
 </form>
-<% } %>
-
-<% if (item.reviews.length) { %>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Date</th>
-        <th>Review</th>
-        <th>Rating</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% let total = 0 %>
-      <% item.reviews.forEach(function(r) { %>
-        <% total += r.rating %>
-        <tr>
-          <td><%= r.userName %></td>
-          <td><%= r.createdAt.toLocaleDateString() %></td>
-          <td><%= r.content %></td>
-          <td><%= r.rating %></td>
-        </tr>
-      <% }); %>
-<% } else { %>
-  <h4>No Reviews Yet</h4>
-<% } %>
-
-<%- include('../partials/footer') -%>
+<% } %> <% if (item.reviews.length) { %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Review</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% let total = 0 %> <% item.reviews.forEach(function(r) { %> <% total +=
+    r.rating %>
+    <tr>
+      <td><%= r.userName %></td>
+      <td><%= r.createdAt.toLocaleDateString() %></td>
+      <td><%= r.content %></td>
+      <td><%= r.rating %></td>
+    </tr>
+    <% }); %> <% } else { %>
+    <h4>No Reviews Yet</h4>
+    <% } %> <%- include('../partials/footer') -%>
+  </tbody>
+</table>
