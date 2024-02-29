@@ -27,6 +27,15 @@ async function fetchAreaList() {
   console.log("list:", data);
   return data;
 }
+async function fetchRanFoods() {
+  const response1 = fetch("www.themealdb.com/api/json/v1/1/random.php");
+  const data1 = await response1.json();
+  const response2 = fetch("www.themealdb.com/api/json/v1/1/random.php");
+  const data2 = await response2.json();
+  const response3 = fetch("www.themealdb.com/api/json/v1/1/random.php");
+  const data3 = await response3.json();
+  return data1, data2, data3;
+}
 
 async function fetchFoodByCategory(strCategory) {
   console.log("Ctrl String: ", strCategory);
@@ -53,4 +62,5 @@ module.exports = {
   fetchAreaList,
   fetchFoodByCategory,
   fetchCategoryList,
+  fetchRanFoods,
 };
