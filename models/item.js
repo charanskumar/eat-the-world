@@ -19,9 +19,8 @@ const itemSchema = new Schema({
     _id: Schema.Types.ObjectId,
     idMeal: {type: Number, required: true},
     name: {type: String, required: true},
-    description: {type: String},
     ingredients: {type: String},
-    price: {type: Number, required: true},
+    price: {type: Number},
     reviews: [reviewSchema]
 }, {
     timestamps: true
