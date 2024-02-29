@@ -1,7 +1,6 @@
 <%- include('../partials/nav') -%>
 
   <h1><%= cuisine.toUpperCase() %></h1>
-
   <% areaFoods.meals.forEach(function(meal) { %>
   <a href="/food/meal/<%= meal.idMeal %>">
     <%= meal.strMeal %>
