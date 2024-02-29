@@ -1,12 +1,12 @@
 var express = require("express");
 var router = express.Router();
-const foodCtrl = require("../controllers/items");
+const foodCtrl = require("../controllers/foodItems");
 const Item = require('../models/item');
 const mongoose = require('mongoose');
 
 router.get("/region/:strArea", async (req, res) => {
   const { strArea } = req.params;
-  //console.log("Router Str: ", strArea);
+  console.log("Router Str: ", strArea);
   try {
     const areaFoods = await foodCtrl.fetchFoodByArea(strArea);
     res.render(`cuisine/index`, { areaFoods, cuisine: strArea });
@@ -46,8 +46,29 @@ router.get("/meal/:idMeal", async (req, res) => {
 router.get("/regions", async (req, res) => {
   try {
     const areaList = await foodCtrl.fetchAreaList();
-    //console.log("Router: ", areaList);
+    console.log("Router: ", areaList);
     res.render("region/index", { areaList });
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+router.get("/category/:strCategory", async (req, res) => {
+  const { strCategory } = req.params;
+  console.log("Router Str: ", strCategory);
+  try {
+    const areaFoods = await foodCtrl.fetchFoodByCategory(strCategory);
+    res.render(`cuisine/mealByCat`, { areaFoods, cuisine: strCategory });
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+router.get("/category", async (req, res) => {
+  try {
+    const categoryList = await foodCtrl.fetchCategoryList();
+    console.log("Router: ", categoryList);
+    res.render("categories/index", { categoryList });
   } catch (error) {
     console.error(error);
   }

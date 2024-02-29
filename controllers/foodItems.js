@@ -5,17 +5,17 @@ async function fetchFoodId(idMeal) {
     `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`
   );
   const data = await response.json();
-  //console.log(data);
+  console.log(data);
   return data;
 }
 
 async function fetchFoodByArea(strArea) {
-  //console.log("Ctrl String: ", strArea);
+  console.log("Ctrl String: ", strArea);
   const response = await fetch(
     `https://www.themealdb.com/api/json/v1/1/filter.php?a=${strArea}`
   );
   const data = await response.json();
-  //console.log("Promise?: ", data);
+  console.log("Promise?: ", data);
   return data;
 }
 
@@ -24,14 +24,33 @@ async function fetchAreaList() {
     "https://www.themealdb.com/api/json/v1/1/list.php?a=list"
   );
   const data = await response.json();
-  //console.log("list:", data);
+  console.log("list:", data);
   return data;
 }
 
+async function fetchFoodByCategory(strCategory) {
+  console.log("Ctrl String: ", strCategory);
+  const response = await fetch(
+    `https://www.themealdb.com/api/json/v1/1/filter.php?c=${strCategory}`
+  );
+  const data = await response.json();
+  console.log("Promise?: ", data);
+  return data;
+}
 
+async function fetchCategoryList() {
+  const response = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/list.php?c=list"
+  );
+  const data = await response.json();
+  console.log("list:", data);
+  return data;
+}
 
 module.exports = {
   fetchFoodId,
   fetchFoodByArea,
   fetchAreaList,
+  fetchFoodByCategory,
+  fetchCategoryList,
 };

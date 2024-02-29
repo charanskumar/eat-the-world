@@ -15,7 +15,7 @@ var usersRouter = require("./routes/users");
 var apiRouter = require("./routes/api");
 
 const cuisinesRouter = require("./routes/cuisines");
-const reviewsRouter = require('./routes/reviews');
+const reviewsRouter = require("./routes/reviews");
 
 var app = express();
 
@@ -28,7 +28,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-app.use('/public', express.static(__dirname + "/public"));
+app.use("/public", express.static(__dirname + "/public"));
 
 app.use(
   session({
