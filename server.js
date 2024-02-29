@@ -5,6 +5,8 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var session = require("express-session");
 var passport = require("passport");
+const bodyParser = require('body-parser');
+
 
 require("dotenv").config();
 require("./config/database");
@@ -13,8 +15,9 @@ require("./config/passport");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var apiRouter = require("./routes/api");
-
 const cuisinesRouter = require("./routes/cuisines");
+const searchRouter = require("./routes/search");
+
 
 var app = express();
 
@@ -28,6 +31,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/public", express.static(__dirname + "/public"));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 
 app.use(
   session({
@@ -48,8 +54,8 @@ app.use(function (req, res, next) {
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/food", apiRouter);
-
 app.use("/cuisine", cuisinesRouter);
+app.use('/search', searchRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

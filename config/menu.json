@@ -1,0 +1,23 @@
+[
+    {
+        "name": "x",
+        "img": "y.png",
+        "year": "1994",
+        "genre": ["e","m"],
+        "rating": "9.2"
+    },
+    {
+        "name": "y",
+        "img": "r.jpg",
+        "year": "1972",
+        "genre": ["d","m"],
+        "rating": "9.2"
+    },
+    {
+        "name": "z",
+        "img": "x.png",
+        "year": "2008",
+        "genre": ["a", "x"],
+        "rating": "9.0"
+    }
+]
