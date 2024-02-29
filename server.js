@@ -16,8 +16,9 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var apiRouter = require("./routes/api");
 const cuisinesRouter = require("./routes/cuisines");
-const searchRouter = require("./routes/search");
+// const searchRouter = require("./routes/search");
 
+const reviewsRouter = require("./routes/reviews");
 
 var app = express();
 
@@ -55,7 +56,8 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/food", apiRouter);
 app.use("/cuisine", cuisinesRouter);
-app.use('/search', searchRouter);
+// app.use('/search', searchRouter);
+app.use('/food', reviewsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
