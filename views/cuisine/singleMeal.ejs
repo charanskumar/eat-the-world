@@ -22,46 +22,50 @@
   </p>
 </div>
 <br /><br />
-<h2>Reviews</h2>
-<% if (user) { %>
-<form
-  id="add-review-form"
-  method="POST"
-  action="/food/meal/<%= item.idMeal %>/reviews"
->
-  <label>Review:</label>
-  <textarea name="content"></textarea>
-  <label>Rating:</label>
-  <select name="rating">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-  </select>
-  <input type="submit" value="Add Review" />
-</form>
-<% } %> <% if (item.reviews.length) { %>
-<table>
+<div class="reviews-form-section">
+  <h2>Reviews</h2>
+  <% if (user) { %>
+  <form
+    id="add-review-form"
+    method="POST"
+    action="/food/meal/<%= item.idMeal %>/reviews"
+  >
+    <label>Review:</label>
+    <textarea name="content"></textarea>
+    <label class="review-label">Rating:</label>
+    <select name="rating">
+      <option value="5">5</option>
+      <option value="4">4</option>
+      <option value="3">3</option>
+      <option value="2">2</option>
+      <option value="1">1</option>
+    </select>
+    <input type="submit" value="Add Review" />
+  </form>
+  <% } %>
+</div>
+<% if (item.reviews.length) { %>
+<table class="user-reviews">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Date</th>
-      <th>Review</th>
-      <th>Rating</th>
+      <th class="review-cats">Name</th>
+      <th class="review-cats">Date</th>
+      <th class="review-cats">Review</th>
+      <th class="review-cats">Rating</th>
     </tr>
   </thead>
   <tbody>
     <% let total = 0 %> <% item.reviews.forEach(function(r) { %> <% total +=
     r.rating %>
-    <tr>
+    <tr id="reviews-list">
       <td><%= r.userName %></td>
       <td><%= r.createdAt.toLocaleDateString() %></td>
       <td><%= r.content %></td>
       <td><%= r.rating %></td>
     </tr>
-    <% }); %> <% } else { %>
-    <h4>No Reviews Yet</h4>
-    <% } %> <%- include('../partials/footer') -%>
+    <% }); %>
   </tbody>
 </table>
+<% } else { %>
+<h4>No Reviews Yet</h4>
+<% } %> <%- include('../partials/footer') -%>

@@ -1,12 +1,25 @@
 <%- include('../partials/nav') -%>
-
-  <h1><%= cuisine.toUpperCase() %></h1>
+<h1 class="catTitle"><%= cuisine.toUpperCase() %></h1>
+<div class="cardContainer">
   <% areaFoods.meals.forEach(function(meal) { %>
-    <a href="/food/meal/<%= meal.idMeal %>">
-      <br />
-      <h6> <%= meal.strMeal %></h6>
-    <img src="<%= meal.strMealThumb %>" alt="Food Picture" />
-    <br /><br />
-  </a>
-  <% }); %> <%- include('../partials/footer') -%>
-</section>
+  <div class="container-fluid">
+    <div class="singleCard">
+      <div class="catCardStyle">
+        <div class="card">
+          <a href="/food/meal/<%= meal.idMeal %>">
+            <br />
+            <h6><%= meal.strMeal %></h6>
+            <img
+              class="card-img-top"
+              src="<%= meal.strMealThumb %>"
+              alt="Food Picture"
+            />
+            <br /><br />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }); %>
+</div>
+<%- include('../partials/footer') -%>
