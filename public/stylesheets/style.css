@@ -165,3 +165,77 @@ svg path:hover{
 .singleCard{
   display: grid;
 }
+
+.container {
+  padding: 15px;
+}
+
+.ingredients {
+  justify-content: left;
+  margin-top: 15px;
+}
+
+#add-review-form {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 1rem;
+  margin: 25px 0;
+  font-size: 16px;
+}
+
+textarea {
+  width: 45%;
+  height: 75px;
+  background-color: rgb(226, 151, 81);
+  color: black;
+  border: 1px solid black;  
+  border-radius: 15px;
+}
+
+#add-review-form > select {
+  width: 40px;
+  background-color: rgb(184, 115, 51);
+  color: black;
+  border: 1px solid black;
+}
+
+#add-review-form > input {
+  /*width: 10%;
+  background-color: rgb(184, 115, 51);*/
+  color: black;
+  width: 25%;
+  background-color: transparent;
+  border: 1px black solid;
+  padding: 9px;
+}
+
+#add-review-form > input:hover {
+  background-color: rgba(0, 0, 0, 0.439);
+  color: white;
+}
+.review-label {
+  font-weight: bold;
+}
+
+.reviews-form-section {
+  background-color: rgb(184, 115, 51);
+  width: 40%;
+  color: black;
+  padding: 7px;
+  border-radius: 20px;
+}
+
+.user-reviews {
+  /*display: grid;
+  grid-gap: 1rem;*/
+  margin-top: 15px;
+  width: 40%
+}
+
+.user-reviews td {
+  padding-bottom: 15px;
+}
+
+/*.review-cats {
+  margin-right: 15px;
+}*/
