@@ -164,6 +164,23 @@ svg path:hover {
   display: grid;
 }
 
+.byRegionSelect {
+  text-align: center;
+  padding: 20px;
+  color: rgb(184, 115, 51);
+  background-color: rgba(1, 62, 141, 0.185);
+  border-radius: 30px;
+  margin: 30px 70px 0px 70px;
+  border: 2px solid rgb(1, 148, 148);
+}
+
+.byRegionSelect a {
+  color: rgb(184, 115, 51);
+}
+.byRegionSelect a:hover {
+  color: white;
+}
+
 /* Individual Item Page */
 .singleItemBody {
   display: flex;
@@ -171,6 +188,7 @@ svg path:hover {
   align-items: center;
   justify-content: center;
   height: 500px;
+  padding: 0px;
 }
 .singleItemTitle {
   margin: 0 auto;
@@ -185,4 +203,42 @@ svg path:hover {
   width: 80%;
   height: 40%;
   object-fit: cover;
+}
+
+.singleItemDeets {
+  background-color: rgb(184, 115, 51);
+  color: black;
+  padding: 10px 30px 10px 30px;
+  border-radius: 10px;
+}
+
+/* Food by Category */
+.catCardStyle {
+  text-align: center;
+  background-color: rgba(1, 62, 141, 0.5);
+  border-radius: 30px;
+  margin-top: 80px;
+  border: 2px solid rgb(1, 148, 148);
+}
+
+.catCardTitle {
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.catCardStyle .card {
+  box-shadow: none;
+  border-radius: 5%;
+  overflow: hidden;
+  background-color: rgb(184, 115, 51);
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.catTitle {
+  text-align: center;
+  margin-top: 80px;
 }

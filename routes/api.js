@@ -17,9 +17,6 @@ router.get("/region/:strArea", async (req, res) => {
 
 router.get("/meal/:idMeal", async (req, res) => {
   const { idMeal } = req.params;
-  //console.log(idMeal);
-  //const item = await Item.find({idMeal:idMeal});
-  //const savedItem = await item.save();
   try {
     let item = await Item.findOne({ idMeal });
     const foodItem = await foodCtrl.fetchFoodId(idMeal);
@@ -34,9 +31,6 @@ router.get("/meal/:idMeal", async (req, res) => {
     }
     console.log(item.idMeal);
     console.log(item._id);
-    //console.log('Item retrieved:', item);
-    //const { idMeal } = req.params;
-    //const foodItem = await foodCtrl.fetchFoodId(idMeal);
     res.render("cuisine/singleMeal", { foodItem, item });
   } catch (error) {
     console.error(error);
@@ -57,8 +51,8 @@ router.get("/category/:strCategory", async (req, res) => {
   const { strCategory } = req.params;
   console.log("Router Str: ", strCategory);
   try {
-    const areaFoods = await foodCtrl.fetchFoodByCategory(strCategory);
-    res.render(`cuisine/mealByCat`, { areaFoods, cuisine: strCategory });
+    const catFoods = await foodCtrl.fetchFoodByCategory(strCategory);
+    res.render(`cuisine/mealByCat`, { catFoods, category: strCategory });
   } catch (error) {
     console.error(error);
   }

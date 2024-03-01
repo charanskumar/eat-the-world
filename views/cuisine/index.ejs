@@ -2,9 +2,9 @@
 
   <h1><%= cuisine.toUpperCase() %></h1>
   <% areaFoods.meals.forEach(function(meal) { %>
-  <a href="/food/meal/<%= meal.idMeal %>">
-    <%= meal.strMeal %>
-    <br />
+    <a href="/food/meal/<%= meal.idMeal %>">
+      <br />
+      <h6> <%= meal.strMeal %></h6>
     <img src="<%= meal.strMealThumb %>" alt="Food Picture" />
     <br /><br />
   </a>

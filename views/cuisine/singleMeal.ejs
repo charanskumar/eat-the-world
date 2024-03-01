@@ -13,10 +13,11 @@
 
   <% }); %>
 
-  <p>
+  <p class="singleItemDeets">
     <% for (let i = 1; i <= 20; i++) { %> <% if
     (foodItem.meals[0][`strIngredient${i}`]) { %> <%=
-    foodItem.meals[0][`strIngredient${i}`] %><% if (i < 20 &&
+    foodItem.meals[0][`strIngredient${i}`].charAt(0).toUpperCase() +
+    foodItem.meals[0][`strIngredient${i}`].slice(1) %><% if (i < 20 &&
     foodItem.meals[0][`strIngredient${i + 1}`]) { %>, <% } %><% } %><% } %>
   </p>
 </div>

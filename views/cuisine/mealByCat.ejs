@@ -1,11 +1,22 @@
-<%- include('../partials/header') -%> 
-<% areaFoods.meals.forEach(function(meal)
-{ %>
-  
-<a href="/food/meal/<%= meal.idMeal %>">
-  <%= meal.strMeal %>
-  <br />
-  <img src="<%= meal.strMealThumb %>" alt="Food Picture" />
-  <br /><br />
-</a>
-<% }); %> <%- include('../partials/footer') -%>
+<%- include('../partials/nav') -%>
+<h1 class="catTitle"><%= category.toUpperCase() %></h1>
+<div class="cardContainer">
+  <% catFoods.meals.forEach(function(meal) { %>
+  <div class="container-fluid">
+    <div class="singleCard">
+      <div class="catCardStyle">
+        <div class="card">
+          <a href="/food/meal/<%= meal.idMeal %>">
+            <%= meal.strMeal %>
+
+            <br />
+            <img src="<%= meal.strMealThumb %>" alt="Food Picture" />
+            <br /><br />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }); %>
+</div>
+<%- include('../partials/footer') -%>
