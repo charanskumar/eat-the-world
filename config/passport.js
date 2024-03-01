@@ -3,10 +3,6 @@ const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const User = require('../models/user');
 require('dotenv').config({path: './env/.env'});
 
-//console.log('GOOGLE_CLIENT_ID:', process.env.GOOGLE_CLIENT_ID);
-//console.log('GOOGLE_SECRET:', process.env.GOOGLE_SECRET);
-//console.log('GOOGLE_CALLBACK:', process.env.GOOGLE_CALLBACK);
-
 passport.use(new GoogleStrategy(
     // Configuration object
     {

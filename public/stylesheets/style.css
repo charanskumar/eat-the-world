@@ -278,8 +278,6 @@ textarea {
 }
 
 #add-review-form input {
-  /*width: 10%;
-  background-color: rgb(184, 115, 51);*/
   color: black;
   width: 25%;
   background-color: transparent;
@@ -306,8 +304,6 @@ textarea {
 }
 
 .user-reviews {
-  /*display: grid;
-  grid-gap: 1rem;*/
   margin-top: 15px;
   width: 40%;
   margin-left: 15px;
@@ -321,7 +317,3 @@ textarea {
   margin-left: 30px;
   margin-top: 10px;
 }
-
-/*.reviews-form-section, .user-reviews {
-  padding: 15px;
-}*/
