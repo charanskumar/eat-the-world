@@ -1,12 +1,25 @@
 <%- include('../partials/nav') -%>
 
-<h1>Food By Category</h1>
-<% categoryList.meals.forEach(function(area){ %> 
-    <div class=" container-fluid">
+<h1 class="catTitle">Food By Category</h1>
+<div class="cardContainer">
+  <% categoryList.meals.forEach(function(area){ %>
+  <div class="container-fluid">
     <div class="singleCard">
-     <div class=" card ">
-        <img class="card-img-top" src="/public/images/burger.jpg" alt="Card image cap">
-            <a href="/food/category/<%= area.strCategory %>"><%= area.strCategory %></a>
+      <div class="catCardStyle">
+        <div class="card">
+          <h3 class="catCardTitle"><%= area.strCategory %></h3>
+          <a href="/food/category/<%= area.strCategory %>">
+            <img
+              class="card-img-top"
+              src="/public/images/catPics/<%= area.strCategory %>.jpg"
+              alt="Card image cap"
+            />
+          </a>
+        </div>
       </div>
-</div></div>
-<% } ); %> <%- include('../partials/footer') -%>
+    </div>
+  </div>
+
+  <% } ); %>
+</div>
+<%- include('../partials/footer') -%>
