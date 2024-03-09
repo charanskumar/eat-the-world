@@ -38,5 +38,3 @@ https://food-compass-0ba825523484.herokuapp.com/
 - Add search bar
 - Add descriptions to each food item
 - Add prices
-
-food-compass-0ba825523484.herokuapp.com
